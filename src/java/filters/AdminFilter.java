@@ -49,13 +49,11 @@ public class AdminFilter implements Filter {
         
         System.out.print(roleID);
         
-        if (roleID == 1) {
-            httpResponse.sendRedirect("admin");
-            return;
-        } else if (roleID == 2) {
+        
+        if (roleID == 2) {
             httpResponse.sendRedirect("notes");
             return;
-        } else if (roleID != 1 || roleID != 2) {
+        }  else if (roleID != 1) {
             httpResponse.sendRedirect("login");
             return;
         }
